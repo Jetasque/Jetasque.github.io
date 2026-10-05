@@ -128,3 +128,17 @@ footer a{color:var(--mut)}footer a:hover{color:var(--txt)}
 .colonne.avant li::before{content:"\2715";position:absolute;left:0;color:#e5484d;font-weight:800}
 .colonne.avec li::before{content:"\2713";position:absolute;left:0;color:var(--vert);font-weight:800}
 @media (max-width:620px){.comparaison{grid-template-columns:1fr}}
+
+/* accessibilité */
+.evitement{position:absolute;left:12px;top:-60px;z-index:20;padding:10px 16px;border-radius:10px;background:var(--txt);color:var(--bg);font-weight:700;text-decoration:none}
+.evitement:focus{top:12px}
+a:focus-visible,summary:focus-visible,video:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+.btn:focus-visible{outline:2px solid var(--txt);outline-offset:3px;border-radius:999px}
+section[id]{scroll-margin-top:72px}
+h1,h2{text-wrap:balance}
+a,summary,button{touch-action:manipulation}
+.montant{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}.btn:hover{transform:none}
+}
