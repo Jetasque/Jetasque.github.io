@@ -37,7 +37,10 @@
   <p class="sous">Clipothèque retrouve tous les clips de tes streamers, les télécharge en un clic, les passe en 9:16 et génère les sous-titres par IA directement sur ton PC. Tu ne jongles plus entre un site de téléchargement, ton logiciel de montage, un outil de sous-titres et un tableur de suivi.</p>
   <div class="cta"><a class="btn pri" href="#prix">Acheter · dès 4,99 €/mois</a><a class="btn" href="#fonctionnalites">Voir ce qu'elle fait</a></div>
   <div class="petit">Remboursé sous 14 jours si ça ne te convient pas · 3 PC par licence · Windows 10 et 11</div>
-  <video class="capture" poster="img/capture-clips.jpg" width="1280" height="800" autoplay muted loop playsinline preload="metadata" aria-label="Démonstration de Clipothèque : liste des clips, cadrage vertical, Studio de sous-titres et réglages d'image"><source src="img/demo.webm" type="video/webm"><source src="img/demo.mp4" type="video/mp4"></video>
+  <div class="capture video">
+    <video poster="img/capture-clips.jpg" width="1280" height="800" muted loop playsinline preload="metadata" aria-label="Démonstration de Clipothèque : liste des clips, cadrage vertical, Studio de sous-titres et réglages d'image"><source src="img/demo.webm" type="video/webm"><source src="img/demo.mp4" type="video/mp4"></video>
+    <button type="button" class="lecture">Pause</button>
+  </div>
 </div></header>
 
 <section class="avap"><div class="conteneur">
@@ -149,6 +152,11 @@
   <div class="avertissement">Clipothèque est un logiciel indépendant, sans lien avec Twitch Interactive, Inc. « Twitch » est une marque de son propriétaire, citée uniquement pour décrire la compatibilité.</div>
 </div></footer>
 <script>
+// vidéo de démo : lecture auto sauf si l'utilisateur limite les animations, bouton pause
+(function(){const v=document.querySelector(".video video"),b=document.querySelector(".video .lecture");if(!v||!b)return;
+const maj=()=>{b.textContent=v.paused?"Lecture":"Pause"};
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches)v.play().catch(()=>{});
+b.addEventListener("click",()=>{v.paused?v.play():v.pause()});v.addEventListener("play",maj);v.addEventListener("pause",maj);maj()})();
 // liens d'achat (modifiables dans config.js)
 document.querySelectorAll("[data-achat]").forEach(a=>{const u=(window.CLIPOTHEQUE||{}).achat||{};if(u[a.dataset.achat])a.href=u[a.dataset.achat]});
 </script>
