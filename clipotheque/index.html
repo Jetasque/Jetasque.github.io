@@ -1,46 +1,74 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" style="color-scheme:dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c0b10">
 <title>Clipothèque — l'atelier du monteur de clips Twitch</title>
 <meta name="description" content="Application Windows pour monteurs : liste et télécharge les clips et VODs Twitch, format vertical 9:16, sous-titres IA en local, GIF, logos et emotes, suivi du montage.">
 <meta property="og:title" content="Clipothèque — l'atelier du monteur de clips Twitch">
 <meta property="og:description" content="Télécharger, trier, sous-titrer et monter les clips de tes streamers. Dès 4,99 €/mois ou 40 € à vie.">
 <meta property="og:image" content="https://jetasque.github.io/clipotheque/img/partage.jpg">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jetasque.github.io/clipotheque/">
 <link rel="icon" href="img/favicon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Clipothèque","operatingSystem":"Windows 10, Windows 11","applicationCategory":"MultimediaApplication","inLanguage":"fr","url":"https://jetasque.github.io/clipotheque/","image":"https://jetasque.github.io/clipotheque/img/partage.jpg","description":"Application Windows pour monteurs : clips et VODs Twitch, format vertical 9:16, sous-titres par IA en local, emotes et GIF.","offers":[{"@type":"Offer","name":"Mensuel","price":"4.99","priceCurrency":"EUR"},{"@type":"Offer","name":"À vie","price":"40","priceCurrency":"EUR"}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="config.js"></script>
 </head>
 <body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
 <nav><div class="conteneur">
-  <a class="marque" href="#"><img src="img/icone.png" alt="">Clipothèque</a>
+  <a class="marque" href="#" translate="no"><img src="img/icone.png" alt="" width="32" height="32">Clipothèque</a>
   <div class="liens"><a href="#fonctionnalites">Fonctionnalités</a><a href="#prix">Prix</a><a href="#faq">FAQ</a></div>
   <a class="btn pri" href="#prix">Acheter</a>
 </div></nav>
 
+<main id="contenu">
 <header class="hero"><div class="conteneur">
   <span class="badge">Application Windows · pour les monteurs de streamers</span>
-  <h1>L'atelier du monteur<br><span class="grad">de clips Twitch</span></h1>
-  <p class="sous">Tous les clips de ta chaîne au même endroit : télécharge-les en un clic, en horizontal ou en vertical pour TikTok, ajoute les sous-titres par IA, les emotes et les GIF, et suis ce qui est monté.</p>
+  <h1>Du clip Twitch au TikTok sous-titré,<br><span class="grad">dans une seule appli</span></h1>
+  <p class="sous">Clipothèque retrouve tous les clips de tes streamers, les télécharge en un clic, les passe en 9:16 et génère les sous-titres par IA directement sur ton PC. Tu ne jongles plus entre un site de téléchargement, ton logiciel de montage, un outil de sous-titres et un tableur de suivi.</p>
   <div class="cta"><a class="btn pri" href="#prix">Acheter · dès 4,99 €/mois</a><a class="btn" href="#fonctionnalites">Voir ce qu'elle fait</a></div>
-  <div class="petit">Remboursé sous 14 jours si ça ne te convient pas · 3 PC par licence</div>
+  <div class="petit">Remboursé sous 14 jours si ça ne te convient pas · 3 PC par licence · Windows 10 et 11</div>
   <img class="capture" src="img/capture-clips.jpg" alt="Clipothèque : liste des clips d'une chaîne avec leur statut (à télécharger, en montage, monté)" width="1440" height="900">
 </div></header>
+
+<section class="avap"><div class="conteneur">
+  <h2 class="centre">Le best-of, sans la corvée</h2>
+  <div class="comparaison">
+    <div class="colonne avant"><h3>Sans Clipothèque</h3><ul>
+      <li>Tu fouilles la page Clips de Twitch, chaîne par chaîne</li>
+      <li>Tu télécharges chaque clip sur un site différent</li>
+      <li>Tu recadres la facecam et le jeu à la main, clip après clip</li>
+      <li>Tu tapes ou corriges les sous-titres dans un outil en ligne</li>
+      <li>Tu cherches les emotes une par une</li>
+      <li>Tu ne sais plus ce qui est déjà monté</li></ul></div>
+    <div class="colonne avec"><h3>Avec Clipothèque</h3><ul>
+      <li>Tous les clips de tes streamers, triés par date ou par vues</li>
+      <li>Téléchargement en un clic, horizontal ou vertical</li>
+      <li>Cadrage 9:16 réglé une seule fois, appliqué partout</li>
+      <li>Sous-titres générés par IA sur ton PC, sans envoi en ligne</li>
+      <li>Emotes Twitch, 7TV, BTTV et FFZ récupérées automatiquement</li>
+      <li>Statut de chaque clip : à télécharger, en montage, monté</li></ul></div>
+  </div>
+</div></section>
 
 <section id="fonctionnalites"><div class="conteneur">
   <h2>Tout ce dont un monteur a besoin,<br>sans jongler entre 5 outils</h2>
   <p class="intro">Pensée par un monteur, pour les monteurs qui font les best-of, TikTok et Shorts de leurs streamers.</p>
   <div class="grille">
-    <div class="carte"><div class="ic">🎬</div><h3>Tous les clips, triés</h3><p>Clips par date, par vues, recherche par titre ou clippeur. Tu vois d'un coup d'œil ce qui est téléchargé, en montage ou déjà monté.</p></div>
-    <div class="carte"><div class="ic">📱</div><h3>Vertical 9:16 en un clic</h3><p>Facecam en haut, jeu en bas : tu règles le cadrage une fois, chaque clip arrive prêt pour TikTok, Reels et Shorts.</p></div>
-    <div class="carte"><div class="ic">💬</div><h3>Sous-titres par IA</h3><p>Transcription automatique (Whisper), directement sur ton PC. Corrige, déplace, stylise, censure les insultes pour TikTok.</p></div>
-    <div class="carte"><div class="ic">😂</div><h3>Emotes, GIF et logos</h3><p>Les emotes de la chaîne (Twitch, 7TV, BTTV, FFZ) récupérées en un clic, à placer et minuter sur la vidéo.</p></div>
-    <div class="carte"><div class="ic">📺</div><h3>VODs et extraits</h3><p>Télécharge une rediff entière ou juste un passage, calé sur les moments clippés, pour avoir plus de contexte.</p></div>
-    <div class="carte"><div class="ic">👥</div><h3>Plusieurs streamers</h3><p>Un dossier rangé par streamer (clips, VODs, montages, médias). Tu passes de l'un à l'autre en un clic.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 4v5M12 4v5M17 4v5"/></svg></div><h3>Tous les clips, triés</h3><p>Clips par date, par vues, recherche par titre ou clippeur. Tu vois d'un coup d'œil ce qui est téléchargé, en montage ou déjà monté.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Vertical 9:16 en un clic</h3><p>Facecam en haut, jeu en bas : tu règles le cadrage une fois, chaque clip arrive prêt pour TikTok, Reels et Shorts.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 15h4M15 15h2M7 11h2M13 11h4"/></svg></div><h3>Sous-titres par IA</h3><p>Transcription automatique (Whisper), directement sur ton PC. Corrige, déplace, stylise, censure les insultes pour TikTok.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div><h3>Emotes, GIF et logos</h3><p>Les emotes de la chaîne (Twitch, 7TV, BTTV, FFZ) récupérées en un clic, à placer et minuter sur la vidéo.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M10 7.5v5l4-2.5z"/></svg></div><h3>VODs et extraits</h3><p>Télécharge une rediff entière ou juste un passage, calé sur les moments clippés, pour avoir plus de contexte.</p></div>
+    <div class="carte"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Plusieurs streamers</h3><p>Un dossier rangé par streamer (clips, VODs, montages, médias). Tu passes de l'un à l'autre en un clic.</p></div>
   </div>
 </div></section>
 
@@ -70,6 +98,7 @@
     <div class="carte"><h3>Ajoute ton streamer</h3><p>Colle le lien de sa chaîne Twitch : son dossier est créé, ses clips apparaissent.</p></div>
     <div class="carte"><h3>Monte</h3><p>Télécharge, passe en vertical, ajoute sous-titres et emotes, exporte. C'est tout.</p></div>
   </div>
+  <div class="cta" style="margin-top:36px"><a class="btn pri" href="#prix">Voir les offres</a></div>
 </div></section>
 
 <section id="prix"><div class="conteneur centre">
@@ -81,24 +110,25 @@
       <div class="montant">4,99 € <small>/ mois</small></div>
       <div class="note">Sans engagement, résiliable à tout moment</div>
       <ul><li>Toutes les fonctionnalités</li><li>Toutes les mises à jour</li><li>3 PC par licence</li><li>Streamers illimités</li></ul>
-      <a class="btn" data-achat="mensuel" href="https://clipotheque.lemonsqueezy.com">Choisir le mensuel</a>
+      <a class="btn" data-achat="mensuel" href="https://clipotheque.lemonsqueezy.com/checkout/buy/37395768-a865-4641-a8fe-d76aa5abbf00?enabled=2187890">Choisir le mensuel</a>
     </div>
     <div class="offre top">
       <span class="ruban">Le plus rentable</span>
       <h3>À vie</h3>
       <div class="montant">40 € <small>une fois</small></div>
-      <div class="note">Rentabilisé en 8 mois, à toi pour toujours</div>
+      <div class="note">Moins cher que 9 mois d'abonnement, à toi pour toujours</div>
       <ul><li>Toutes les fonctionnalités</li><li>Mises à jour incluses</li><li>3 PC par licence</li><li>Streamers illimités</li></ul>
-      <a class="btn pri" data-achat="vie" href="https://clipotheque.lemonsqueezy.com">Acheter à vie</a>
+      <a class="btn pri" data-achat="vie" href="https://clipotheque.lemonsqueezy.com/checkout/buy/9838ddbf-b762-460e-a9d0-18e63262f058?enabled=2187896">Acheter à vie</a>
     </div>
   </div>
-  <div class="garanties"><span>🔒 Paiement par Lemon Squeezy (carte, PayPal…)</span><span>↩ Remboursé sous 14 jours</span><span>🔑 Clé de licence reçue par e-mail</span></div>
+  <div class="garanties"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Paiement par Lemon Squeezy (carte, PayPal…)</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-15-6.7L3 13"/></svg>Remboursé sous 14 jours</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg>Clé de licence reçue par e-mail</span></div>
   <p class="config">Configuration : Windows 10 ou 11 (64 bits), connexion internet. Pour les sous-titres par IA : 8 Go de RAM conseillés et environ 1 Go d'espace pour le modèle, téléchargé une seule fois.</p>
 </div></section>
 
 <section id="faq"><div class="conteneur">
   <h2 class="centre" style="text-align:center">Questions fréquentes</h2>
   <div class="faq" style="margin-top:30px">
+    <details><summary>Mensuel ou à vie, que choisir ?</summary><p>Les deux offres donnent exactement les mêmes fonctionnalités. Le mensuel est idéal pour tester sur quelques semaines, sans engagement. Si tu montes régulièrement, l'offre à vie revient moins cher dès le 9e mois.</p></details>
     <details><summary>Faut-il un compte Twitch ?</summary><p>Non. Clipothèque lit les clips et VODs publics de la chaîne à partir de son nom ou de son lien.</p></details>
     <details><summary>Est-ce que je peux l'utiliser pour n'importe quelle chaîne ?</summary><p>Clipothèque est faite pour les monteurs qui travaillent <b>avec l'accord du streamer</b>. Les vidéos appartiennent à leurs auteurs : tu restes responsable de l'usage que tu en fais et du respect des conditions d'utilisation de Twitch.</p></details>
     <details><summary>Sur combien de PC puis-je l'installer ?</summary><p>3 PC par licence (par exemple ton PC fixe et ton portable). Tu peux libérer un PC à tout moment depuis Paramètres → Licence.</p></details>
@@ -110,6 +140,7 @@
     <details><summary>Windows affiche « Windows a protégé votre ordinateur »</summary><p>C'est normal pour une application récente. Clique sur « Informations complémentaires » puis « Exécuter quand même ».</p></details>
   </div>
 </div></section>
+</main>
 
 <footer><div class="conteneur">
   <span>© 2026 Clipothèque · <a href="mailto:clipotheque.support@gmail.com">clipotheque.support@gmail.com</a></span>

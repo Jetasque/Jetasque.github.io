@@ -110,3 +110,35 @@ footer a{color:var(--mut)}footer a:hover{color:var(--txt)}
   nav .btn{padding:9px 14px;font-size:14px}
   footer .liens{margin-left:0}
 }
+
+/* icônes SVG */
+.carte .ic svg{width:24px;height:24px;fill:none;stroke:var(--txt);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.garanties span{display:inline-flex;align-items:center;gap:8px}
+.garanties svg{width:16px;height:16px;fill:none;stroke:var(--rose);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* avant / après */
+.avap{padding-top:40px}
+.comparaison{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.colonne{border-radius:var(--r);padding:26px;border:1px solid var(--ligne);background:var(--carte)}
+.colonne.avec{border:2px solid transparent;background:linear-gradient(var(--carte),var(--carte)) padding-box,var(--grad) border-box}
+.colonne h3{margin:0 0 12px;font-size:19px}
+.colonne ul{list-style:none;padding:0;margin:0}
+.colonne li{padding:6px 0 6px 28px;position:relative;color:var(--mut)}
+.colonne.avec li{color:var(--txt)}
+.colonne.avant li::before{content:"\2715";position:absolute;left:0;color:#e5484d;font-weight:800}
+.colonne.avec li::before{content:"\2713";position:absolute;left:0;color:var(--vert);font-weight:800}
+@media (max-width:620px){.comparaison{grid-template-columns:1fr}}
+
+/* accessibilité */
+.evitement{position:absolute;left:12px;top:-60px;z-index:20;padding:10px 16px;border-radius:10px;background:var(--txt);color:var(--bg);font-weight:700;text-decoration:none}
+.evitement:focus{top:12px}
+a:focus-visible,summary:focus-visible,video:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+.btn:focus-visible{outline:2px solid var(--txt);outline-offset:3px;border-radius:999px}
+section[id]{scroll-margin-top:72px}
+h1,h2{text-wrap:balance}
+a,summary,button{touch-action:manipulation}
+.montant{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}.btn:hover{transform:none}
+}
