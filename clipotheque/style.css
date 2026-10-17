@@ -200,3 +200,10 @@ nav:not(.barre) .liens a{text-decoration:none;color:var(--mut);font-size:15px}
   .grille-aussi li{display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:2px}
   .grille-aussi .ic{grid-row:span 2;margin:2px 0 0}
 }
+
+/* Pro */
+.pro .surtitre{margin-bottom:10px}
+.pro-titre{font-size:15px;font-weight:600;color:var(--mut);margin-top:44px;text-transform:uppercase;letter-spacing:.04em}
+.pro-titre+.points{margin-top:20px}
+.pro .offres{margin-top:48px}
+.pro-note{margin-top:20px;max-width:40em}
