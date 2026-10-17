@@ -205,13 +205,15 @@ nav:not(.barre) .liens a{text-decoration:none;color:var(--mut);font-size:15px}
 
 /* Pro : bande teintée pour la distinguer du reste */
 .pro{background:var(--surface2);padding:104px 0;margin-top:136px}
-.pro-groupes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.pro-groupes{display:grid;grid-template-columns:2fr 1fr;gap:24px;margin-top:48px}
 .pro-groupe{background:var(--surface);border:1px solid var(--ligne);border-radius:var(--r-media);padding:32px}
 .pro-groupe.bientot{background:transparent;border-style:dashed;border-color:color-mix(in srgb,var(--mut) 40%,var(--ligne))}
 .pro-groupe h3{font-size:17px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .liste-pro{margin-top:12px}
 .liste-pro li{display:flex;gap:14px;padding:16px 0}
 .liste-pro li+li{border-top:1px solid var(--ligne)}
+.liste-pro.deux{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.liste-pro.deux li:nth-child(2){border-top:0}
 .liste-pro .ic{font-size:22px;color:var(--accent-texte);margin-top:2px}
 .liste-pro b{display:block;margin-bottom:2px}
 .liste-pro span{color:var(--mut);font-size:15.5px}
@@ -230,6 +232,7 @@ nav:not(.barre) .liens a{text-decoration:none;color:var(--mut);font-size:15px}
 
 
 @media (max-width:960px){.pro-groupes{grid-template-columns:1fr}}
+@media (max-width:640px){.liste-pro.deux{grid-template-columns:1fr}.liste-pro.deux li:nth-child(2){border-top:1px solid var(--ligne)}}
 @media (max-width:640px){
   .pro{padding:72px 0;margin-top:96px}
   .pro-groupe{padding:24px}
