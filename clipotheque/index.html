@@ -166,8 +166,8 @@
         <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Sous-titres par IA sur ton ordinateur</span></li>
         <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>3 ordinateurs, streamers illimités</span></li>
       </ul>
-      <a class="btn sec f-m" data-achat="mensuel" href="https://clipotheque.lemonsqueezy.com/checkout/buy/49973c93-f830-4895-b657-a57542e2feb7?enabled=2233901">Choisir le mensuel</a>
-      <a class="btn sec f-v" data-achat="vie" href="https://clipotheque.lemonsqueezy.com/checkout/buy/a4decc5b-8946-4a12-8559-ff085f0bcc79?enabled=2233902">Choisir l'offre à vie</a>
+      <a class="btn sec f-m" data-achat="mensuel" href="https://clipotheque.lemonsqueezy.com/checkout/buy/49973c93-f830-4895-b657-a57542e2feb7?enabled=2233901" target="_blank" rel="noopener noreferrer">Choisir le mensuel<span class="evitement-lecteur"> (nouvel onglet)</span></a>
+      <a class="btn sec f-v" data-achat="vie" href="https://clipotheque.lemonsqueezy.com/checkout/buy/a4decc5b-8946-4a12-8559-ff085f0bcc79?enabled=2233902" target="_blank" rel="noopener noreferrer">Choisir l'offre à vie<span class="evitement-lecteur"> (nouvel onglet)</span></a>
     </div>
     <div class="offre conseillee">
       <h3>Clipothèque Pro</h3>
@@ -182,8 +182,8 @@
         <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Surveillance en fond, fenêtre fermée</span></li>
         <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></svg><span>Shorts préparés tout seuls, blancs coupés</span></li>
       </ul>
-      <a class="btn pri f-m" data-achat="pro_mensuel" href="https://clipotheque.lemonsqueezy.com/checkout/buy/c96f7a7e-98fa-4eb3-acc3-401f55e093ce?enabled=2233899">Choisir Pro mensuel</a>
-      <a class="btn pri f-v" data-achat="pro_vie" href="https://clipotheque.lemonsqueezy.com/checkout/buy/daba0e5e-350d-421a-aa6c-ff170b29eb0d?enabled=2243420">Choisir Pro à vie</a>
+      <a class="btn pri f-m" data-achat="pro_mensuel" href="https://clipotheque.lemonsqueezy.com/checkout/buy/c96f7a7e-98fa-4eb3-acc3-401f55e093ce?enabled=2233899" target="_blank" rel="noopener noreferrer">Choisir Pro mensuel<span class="evitement-lecteur"> (nouvel onglet)</span></a>
+      <a class="btn pri f-v" data-achat="pro_vie" href="https://clipotheque.lemonsqueezy.com/checkout/buy/daba0e5e-350d-421a-aa6c-ff170b29eb0d?enabled=2243420" target="_blank" rel="noopener noreferrer">Choisir Pro à vie<span class="evitement-lecteur"> (nouvel onglet)</span></a>
     </div>
   </div>
   <ul class="garanties">
@@ -227,8 +227,8 @@
 </div></footer>
 
 <script>
-// liens d'achat (modifiables dans config.js)
-document.querySelectorAll("[data-achat]").forEach(a=>{const u=(window.CLIPOTHEQUE||{}).achat||{};if(u[a.dataset.achat])a.href=u[a.dataset.achat]});
+// liens d'achat (modifiables dans config.js), ouverts dans un nouvel onglet
+document.querySelectorAll("[data-achat]").forEach(a=>{const u=(window.CLIPOTHEQUE||{}).achat||{};if(u[a.dataset.achat])a.href=u[a.dataset.achat];a.target="_blank";a.rel="noopener noreferrer"});
 
 // démo : lecture automatique quand elle est visible, sauf si l'utilisateur limite les animations
 (function(){
