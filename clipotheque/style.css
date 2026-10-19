@@ -133,6 +133,11 @@ h2{font-size:clamp(1.75rem,3.3vw,2.55rem);line-height:1.12;letter-spacing:-.028e
 .accroche{color:var(--mut);margin-top:6px;font-size:15.5px}
 .offre li .ic{color:var(--accent-texte)}
 .offre .btn{padding:12px 18px;font-size:16px}
+.avant-install{display:flex;gap:14px;align-items:flex-start;margin-top:32px;padding:18px 22px;border:1px solid var(--ligne);border-left:3px solid var(--accent);border-radius:var(--r-btn);background:var(--surface);max-width:880px;font-size:15.5px}
+.avant-install>.ic{font-size:22px;color:var(--accent-texte);flex:none;margin-top:2px}
+.avant-install p{color:var(--mut)}.avant-install p+p{margin-top:6px}
+.avant-install p b{color:var(--encre)}
+.avant-install a{color:var(--accent-texte)}
 .garanties{display:flex;gap:12px 28px;flex-wrap:wrap;margin-top:26px;color:var(--mut);font-size:15px}
 .garanties li{display:flex;gap:8px;align-items:center}
 .config{margin-top:40px;padding-top:28px;border-top:1px solid var(--ligne);display:grid;gap:10px;max-width:880px}
@@ -151,6 +156,9 @@ summary .ic{color:var(--mut);transition:transform .2s}
 details[open] summary .ic{transform:rotate(45deg)}
 details p{margin:-4px 0 22px;color:var(--mut);max-width:40em}
 details a{color:var(--accent-texte)}
+details ol{margin:-8px 0 18px;padding-left:1.3em;color:var(--mut);max-width:40em;list-style:decimal}
+details ol li{margin-bottom:8px}
+details code{font-size:.92em}
 
 /* pied de page */
 footer{border-top:1px solid var(--ligne);padding:36px 0 44px;color:var(--mut);font-size:14px;margin-top:128px}
