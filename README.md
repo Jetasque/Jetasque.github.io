@@ -34,6 +34,11 @@ par un visiteur n'est injecté dans la page.
 
 Ces documents sont une base de travail et ne constituent pas un avis juridique.
 
+## Hébergement Docker
+
+Le dossier `_docker/` permet de servir le site avec nginx dans Docker sur une autre machine.
+Mode d'emploi : `_docker/LISEZMOI.md`. Le dossier commence par `_` : GitHub Pages ne le publie pas.
+
 ## Licence
 
 Tous droits réservés, voir `LICENSE`. La police Geist reste sous SIL Open Font License 1.1.
