@@ -2,9 +2,7 @@ name: Image Docker du site
 
 # Verifie que le site tourne dans Docker. Ne publie rien et ne touche pas a GitHub Pages.
 on:
-  pull_request:
   push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
