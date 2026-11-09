@@ -1,0 +1,17 @@
+# Lancement : depuis ce dossier (_docker), "docker compose up -d --build".
+# Port sur la machine hote : 8080 par defaut, modifiable avec PORT=80 dans un fichier .env a cote.
+services:
+  site:
+    build:
+      context: ..
+      dockerfile: _docker/Dockerfile
+    image: clipotheque-site:latest
+    container_name: clipotheque-site
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

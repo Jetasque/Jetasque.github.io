@@ -1,0 +1,57 @@
+name: Image Docker du site
+
+# Verifie que le site tourne dans Docker. Ne publie rien et ne touche pas a GitHub Pages.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  construire-et-tester:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Construire et lancer avec docker compose
+        working-directory: _docker
+        run: docker compose up -d --build --wait
+
+      - name: Verifier les reponses HTTP
+        run: |
+          set -e
+          b=http://127.0.0.1:8080
+          curl -fsS $b/sante
+          curl -fsS -o /dev/null $b/
+          curl -fsS -o /dev/null $b/clipotheque/
+          curl -fsS $b/clipotheque/version.json
+          curl -fsS -o /dev/null $b/clipotheque/video/demo.mp4
+          test "$(curl -s -o /dev/null -w '%{http_code}' $b/introuvable)" = 404
+          curl -sSI $b/clipotheque/ | tee entetes.txt
+          grep -qi '^content-security-policy:' entetes.txt
+          grep -qi '^x-content-type-options: nosniff' entetes.txt
+          curl -sSI $b/clipotheque/version.json | grep -qi '^cache-control: no-cache'
+          curl -sSI -H 'Range: bytes=0-99' $b/clipotheque/video/demo.mp4 | grep -q ' 206'
+
+      - name: Verifier les pages dans Chrome (console, CSP, ressources)
+        run: |
+          npm i --no-save --no-package-lock playwright-core@1.49.1
+          node _docker/verifier-page.mjs http://127.0.0.1:8080
+
+      - name: Journaux du conteneur
+        if: always()
+        working-directory: _docker
+        run: docker compose logs
+
+      - name: Exporter l'image (docker save)
+        run: docker save clipotheque-site:latest | gzip > clipotheque-site.tar.gz
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clipotheque-site-image
+          path: clipotheque-site.tar.gz
+          retention-days: 30
